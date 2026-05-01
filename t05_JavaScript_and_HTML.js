@@ -1,7 +1,7 @@
 /****************************
-Name of task:t03_maths
+Name of task:t05_Javascript_and_HTML
 ****************************/
-console.log("Running t03_maths.js")
+console.log("Running t05_Javascript_and_HTML.js")
 
 //Variables
 var user = "Finn"
@@ -16,6 +16,13 @@ Main Code
 
 
 ****************************/
+const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+OUTPUT.innerHTML = "<p>Added by JavaScript</p>";
+OUTPUT.innerHTML += "<p>Hello " + user + "</p>";
+OUTPUT.innerHTML += "<p>Second Paragraph line.</p>";
+OUTPUT.innerHTML += "<p>Third Paragraph line.</p>";
+
+
 
 
 
