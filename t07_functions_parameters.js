@@ -1,7 +1,7 @@
 /****************************
-Name of task:t06_functions
+Name of task:t07_functions_parameters
 ****************************/
-console.log("Running t05_Javascript_and_HTML.js")
+console.log("Running t07_functions_parameters.js")
 
 //Variables
 var user = "Finn"
@@ -17,10 +17,7 @@ Main Code
 
 ****************************/
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-OUTPUT.innerHTML = "<p>Added by JavaScript</p>";
-OUTPUT.innerHTML += "<p>Hello " + user + "</p>";
-OUTPUT.innerHTML += "<p>Second Paragraph line.</p>";
-OUTPUT.innerHTML += "<p>Third Paragraph line.</p>";
+
 
 
 
@@ -32,10 +29,10 @@ Functions
 ****************************/
 
 
-function welcome(){
 
-OUTPUT.innerHTML += "<p>Less code matters</p>"
-}
+
+
+
 /****************************
 Comment
 ****************************/
@@ -47,6 +44,17 @@ console.log("You have "+pocketmoney+ " dollars")
 console.log("You spend half of your money, now you have "+(pocketmoney/2))
 pocketmoney = pocketmoney/2;
 console.log("Then you get $3, now you have "+(pocketmoney+3))
-welcome()
-welcome()
+
+
+
+function displayProduct(_name, _price){
+
+OUTPUT.innerHTML += "<p>" + _name+": " + "$"+ _price+"</p>";
+}
+
+displayProduct("Chocolate Bar", "4")
+
+displayProduct("Chips", "3")
+
+displayProduct("Drink", "2.50")
 
