@@ -17,6 +17,7 @@ Main Code
 
 ****************************/
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+const OUTPUT1 = document.getElementById("spaceForJavaScriptOutputMoney");
 OUTPUT.innerHTML = "<p>Added by JavaScript</p>";
 OUTPUT.innerHTML += "<p>Hello " + user + "</p>";
 OUTPUT.innerHTML += "<p>Second Paragraph line.</p>";
@@ -53,7 +54,7 @@ function getFormInput(){
 function getFormInputMoney(){
   const NAME_FIELD = document.getElementById("moneyField");
   let pocketMoney = MONEY_FIELD.value;
-  OUTPUT.innerHTML = "<p>You have $"+pocketMoney+" dollars.</p>";
+  OUTPUT1.innerHTML = "<p>You have $"+pocketMoney+" dollars.</p>";
 }
 
 function welcome(){
