@@ -5,13 +5,8 @@ console.log("Running t13_functions_return.js")
 
 //Variables
 
-
-
-
 /**************************** 
 Main Code
-
-
 ****************************/
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
@@ -33,6 +28,7 @@ console.log("Then you get $3, now you have "+(pocketmoney+3))
 ****************************/
 
 
+
 function getFormInput(){
   const NAME_FIELD = document.getElementById("nameField");
   var userName = NAME_FIELD.value;
@@ -46,36 +42,50 @@ function getFormInput(){
   const MONEY_FIELD = document.getElementById("moneyField");
   var pocketMoney = MONEY_FIELD.value;
   OUTPUT.innerHTML += "<p>You have $"+pocketMoney+" dollars.</p>";
-  if(pocketMoney>=4){ 
-    OUTPUT.innerHTML += "<p>A choclate bar costs 4$<br> You can afford a chocolate bar<p>"
-  } else{
-  OUTPUT.innerHTML += "<p>A choclate bar costs 4$<br> You can't afford a chocolate bar<p>"
-  }  
-}
+  if (pocketMoney < 4) {
 
-function calculatePay(_hours){
+  OUTPUT.innerHTML += "<p>Sorry you CAN'T afford a chocolate bar</p>";
 
-var pay = _hours * 18.80;
-pay = pay - (pay * 0.105);
-pay = pay - (pay * 0.04);
-pay = pay + 10;
-return pay;
+} else {
+
+  OUTPUT.innerHTML += "<p>You CAN afford a chocolate bar</p>";
+
+  let change = calculateChange(pocketMoney, 4);
+
+  OUTPUT.innerHTML += "<p>You will get $" + change + " change</p>";
 
 }
+}
+
+
+function displayProduct(_name, _price){
+    OUTPUT.innerHTML += "<p>" + _name + ": $" + _price + "</p>";
+}
 
 
 
-var mondayPay = calculatePay(8);
-var tuesdayPay = calculatepPay(6);
+function getName() {
+  var userName = document.getElementById("nameInput").value;
 
-OUTPUT.innerHTML += "This Weeks pay:<br>"
-OUTPUT.innerHTML += "Monday: $"+mondayPay+"<br>"
-OUTPUT.innerHTML += "Monday: $"+tuesdayPay+"<br>"
+  OUTPUT.innerHTML += "<h2>Hello " + name + "!</h2>";
+}
 
+function calculateChange(_money, _price){
+
+  return _money - _price;
+
+}
+
+
+
+
+
+displayProduct("Chocolate bar", 4);
+displayProduct("Chips", 3);
+displayProduct("Drink", 2.50);
+
+getName()
 
 /****************************
 Comment
 ****************************/
-
-
-
