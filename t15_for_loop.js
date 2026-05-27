@@ -29,6 +29,51 @@ console.log("Then you get $3, now you have "+(pocketmoney+3))
 
 
 
+
+
+
+
+
+
+
+
+
+  function calculateChange(_money, _price){
+
+    return _money - _price;
+
+  }
+
+  const CHOCO_FIELD = document.getElementById("chocoField");
+  var chocoArray = ["You loath chocolate", "Chocolate is meth", "Chocolate is pretty good", "Chocolate is Marajuana"];
+  var choice = CHOCO_FIELD.value;
+  OUTPUT.innerHTML += "You chose: "+chocoArray[choice]+"<br>";
+
+
+function displayProduct(_name, _price){
+    OUTPUT.innerHTML += "<p>" + _name + ": $" + _price + "</p>";
+}
+
+
+
+function Start() {
+
+  displayProduct("Chocolate bar", 4);
+  displayProduct("Chips", 3);
+  displayProduct("Drink", 2.50);
+
+  for (var i = 99; i >= 1; i--) {
+
+    if (i == 1) {
+      OUTPUT.innerHTML += i + " bottle of age appropriate beverage on the wall<br>";
+    } else {
+      OUTPUT.innerHTML += i + " bottles of age appropriate beverages on the wall<br>";
+    }
+
+  }
+}
+
+
 function getFormInput(){
   const NAME_FIELD = document.getElementById("nameField");
   var userName = NAME_FIELD.value;
@@ -54,57 +99,9 @@ function getFormInput(){
 
   OUTPUT.innerHTML += "<p>You will get $" + change + " change</p>";
 
-}
-}
 
-function calculateChange(_money, _price){
-
-  return _money - _price;
-
+  
 }
 
-  const CHOCO_FIELD = document.getElementById("chocoField");
-  var chocoArray = ["You loath chocolate", "Chocolate is meh", "Chocolate is pretty goo", "Chocolate is Marajuana"];
-  var choice = CHOCO_FIELD.value;
-  OUTPUT.innerHTML += "You chose: "+chocoArray[choice]+"<br>";
-
-
-function displayProduct(_name, _price){
-    OUTPUT.innerHTML += "<p>" + _name + ": $" + _price + "</p>";
+Start()
 }
-
-
-
-function getName() {
-  var userName = document.getElementById("nameField").value;
-
-  OUTPUT.innerHTML += "<h2>Hello " + userName + "!</h2>";
-}
-
-
-
-
-function Start(){
-displayProduct("Chocolate bar", 4);
-displayProduct("Chips", 3);
-displayProduct("Drink", 2.50);
-getName()
-
-}
-
-
-for (var i = 99; i >= 1; i--) {
-
-  if (i == 1) {
-    OUTPUT.innerHTML += (i + " bottle of age appropriate beverage on the wall<br>");
-  } else {
-    OUTPUT.innerHTML += (i + " bottles of age appropriate beverages on the wall<br>");
-  }
-
-}
-
-
-
-/****************************
-Comment
-****************************/
