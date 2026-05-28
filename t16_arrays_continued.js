@@ -81,7 +81,7 @@ function getFormInput(){
 
   const AGE_FIELD = document.getElementById("ageField");
   var Age = AGE_FIELD.value;
-  OUTPUT.innerHTML += "<p>You are  "+Age+" years old</p>";
+  OUTPUT.innerHTML = "<p>You are  "+Age+" years old</p>";
   
      
   const MONEY_FIELD = document.getElementById("moneyField");
