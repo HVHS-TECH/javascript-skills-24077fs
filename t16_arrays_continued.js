@@ -49,6 +49,14 @@ console.log("Then you get $3, now you have "+(pocketmoney+3))
   var choice = CHOCO_FIELD.value;
   OUTPUT.innerHTML += "You chose: "+chocoArray[choice]+"<br>";
 
+  const SHOP_FIELD = document.getElementById("shopField");
+  var shopArray = [];
+  for(var i=0; i<shopArray.length; i++){
+  OUTPUT.innerHTML += "Item "+ i +": "+classArray[i]+"<br>";
+}
+
+
+
 
 function displayProduct(_name, _price){
     OUTPUT.innerHTML += "<p>" + _name + ": $" + _price + "</p>";
