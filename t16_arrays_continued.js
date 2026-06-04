@@ -10,6 +10,8 @@ Main Code
 ****************************/
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
+var shopArray = ["milk", "cheese",];
+
 /****************************
 Functions
 
@@ -18,7 +20,7 @@ function start() {
 console.log("Hi " + userName)
 console.log("As of "+"today "+"you are "+Age+" years old.")
 console.log("You were born in "+yearborn)
-console.log("In 10 years you will be "+(age+10)+" years old")
+console.log("In 10 years you will be "+(Age+10)+" years old")
 console.log("You have "+pocketmoney+ " dollars")
 console.log("You spend half of your money, now you have "+(pocketmoney/2))
 pocketmoney = pocketmoney/2;
@@ -26,16 +28,6 @@ console.log("Then you get $3, now you have "+(pocketmoney+3))
 
 }
 ****************************/
-
-
-
-
-
-
-
-
-
-
 
 
   function calculateChange(_money, _price){
@@ -49,14 +41,8 @@ console.log("Then you get $3, now you have "+(pocketmoney+3))
   var choice = CHOCO_FIELD.value;
   OUTPUT.innerHTML += "You chose: "+chocoArray[choice]+"<br>";
 
-  const SHOP_FIELD = document.getElementById("shopField");
-  var shopArray = [];
-  for(var i=0; i<shopArray.length; i++){
-  OUTPUT.innerHTML += "Item "+ i +": "+classArray[i]+"<br>";
-}
 
-
-
+  
 
 function displayProduct(_name, _price){
     OUTPUT.innerHTML += "<p>" + _name + ": $" + _price + "</p>";
@@ -79,17 +65,23 @@ function Start() {
     }
 
   }
+
+
 }
 
 
+
+
 function getFormInput(){
+  
   const NAME_FIELD = document.getElementById("nameField");
   var userName = NAME_FIELD.value;
+  OUTPUT.innerHTML = "<p>Hello " + userName + "</p>";
 
 
   const AGE_FIELD = document.getElementById("ageField");
   var Age = AGE_FIELD.value;
-  OUTPUT.innerHTML = "<p>You are  "+Age+" years old</p>";
+  OUTPUT.innerHTML += "<p>You are  "+Age+" years old</p>";
   
      
   const MONEY_FIELD = document.getElementById("moneyField");
@@ -107,7 +99,16 @@ function getFormInput(){
 
   OUTPUT.innerHTML += "<p>You will get $" + change + " change</p>";
 
+  const SHOP_FIELD = document.getElementById("shopField");
+  
+  
+  shopArray.push(SHOP_FIELD.value);
 
+  for (var i = 0; i < shopArray.length; i++) {
+  OUTPUT.innerHTML += "Item " + (i + 1) + ": " + shopArray[i] + "<br>";
+}
+
+  
   
 }
 
